@@ -2,9 +2,10 @@
 import random
 number = random.randint(-10000, 10000)
 var = number % 10
+print("Last digit of {:d} is {:d}".format(number, var), end="")
 if var > 5:
-    print("Last digit of {:d} is {:d} and is greater than 5".format(number, var))
+    print("and is greater than 5")
 elif var == 0:
-    print("Last digit of {:d} is {:d} and is 0".format(number, var))
+    print("and is 0")
 else:
-    print("Last digit of {:d} is {:d} and is less than 6 and not 0".format(number, var))
+    print("and is less than 6 and not 0")
