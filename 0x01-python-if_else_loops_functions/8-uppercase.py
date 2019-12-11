@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def uppercase(str):
     for c in range(0, len(str)):
         if ord(c) in range(97, 123):
