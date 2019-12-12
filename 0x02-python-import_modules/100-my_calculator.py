@@ -11,14 +11,15 @@ if l != 4:
 
 a = int(sys.argv[1])
 b = int(sys.argv[3])
-if sys.argv[2] == '+':
-    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
-elif sys.argv[2] == '-':
-    print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
-elif sys.argv[2] == '*':
-    print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
-elif sys.argv[2] == '/':
-    print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+op = sys.argv[2]
+if op == '+':
+    print("{:d} {} {:d} = {:d}".format(a, op, b, add(a, b)))
+elif op == '-':
+    print("{:d} {} {:d} = {:d}".format(a, op, b, sub(a, b)))
+elif op == '*':
+    print("{:d} {} {:d} = {:d}".format(a, op, b, mul(a, b)))
+elif op == '/':
+    print("{:d} {} {:d} = {:d}".format(a, op, b, div(a, b)))
 else:
     print("Unknown operator. Available operators: +, -, * and / ")
     sys.exit(1)
