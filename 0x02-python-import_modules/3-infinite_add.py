@@ -5,5 +5,5 @@ if __name__ == "__main__":
     l = len(argv)
     s = 0
     for i in range(1, l):
-        s= s + argv[i]
+        s = int (s + argv[i])
     print("{:d}".format(s))
