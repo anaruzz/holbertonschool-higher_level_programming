@@ -15,7 +15,7 @@ while (f && s && f->next)
 {
 s = s->next;
 f = (f->next)->next;
-if (s->n == f->n)
+if (s == f)
 return (1);
 }
 return (0);
