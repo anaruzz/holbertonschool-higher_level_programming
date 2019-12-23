@@ -12,7 +12,6 @@ listint_t *f = list;
 listint_t *s = list;
 if (list == NULL || list->next == NULL)
 return (0);
-  s = s->next;
 f = f->next->next;
 while (f->n != s->n)
 {
