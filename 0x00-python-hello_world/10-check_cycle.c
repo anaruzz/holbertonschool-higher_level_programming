@@ -12,12 +12,15 @@ listint_t *f = list;
 listint_t *s = list;
 if (list == NULL || list->next == NULL)
 return (0);
-while (f && f->next && f->next->next)
+  s = s->next;
+f = f->next->next;
+while (f->n != s->n)
 {
 s = s->next;
-if (s->n == f->n)
 f = f->next->next;
-return (1);
 }
+if (s->n == f->n)
+return (1);
+
 return (0);
 }
