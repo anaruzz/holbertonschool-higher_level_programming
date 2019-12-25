@@ -38,5 +38,6 @@ else
   h->next = new;
   new->next = NULL;
 }
+h = new;
 return (h);
 }
