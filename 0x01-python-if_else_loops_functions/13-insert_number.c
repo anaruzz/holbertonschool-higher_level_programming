@@ -18,8 +18,10 @@ if (!new)
 return (NULL);
 
 if (!*head)
-return (NULL);
-
+{
+(*head)->n = number;
+(*head)->next = NULL;
+}
 new->n = number;
 while(h)
 {
