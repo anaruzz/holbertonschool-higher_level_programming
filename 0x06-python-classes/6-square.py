@@ -11,7 +11,7 @@ class Square:
         message = 'position must be a tuple of 2 positive integers'
         if position is not None:
             if type(position) is not tuple:
-                raise TypeError()
+                raise TypeError(message)
             elif len(position) != 2:
                 raise TypeError(message)
             elif type(position[0]) is not int and type(position[1]) is not int:
