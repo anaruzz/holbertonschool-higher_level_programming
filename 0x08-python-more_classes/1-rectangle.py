@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 class Rectangle:
     def __init__(self, width=0, height=0):
-        if height is not None:
-            self.__height = height
         if width is not None:
             self.__width = width
+        if height is not None:
+            self.__height = height
 
     @property
     def width(self):
