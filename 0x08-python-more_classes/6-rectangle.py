@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 class Rectangle:
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
         if height is not None:
             if type(height) is not int:
@@ -50,21 +50,21 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        result=""
+        result = ""
         for i in range(self.__height):
             for j in range(self.__width):
                 result += '#'
             if i < self.__height - 1:
-                result +='\n'
+                result += '\n'
         return(result)
 
     def __repr__(self):
-        result=""
+        result = ""
         for i in range(self.__height):
             for j in range(self.__width):
                 result += '#'
             if i < self.__height - 1:
-                result +='\n'
+                result += '\n'
         return "Rectangle(%s, %s)" % (self.__width, self.__height)
 
     def __del__(self):
