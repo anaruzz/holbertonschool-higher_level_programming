@@ -3,7 +3,7 @@ def add_attribute(obj=None, name="", value=""):
     """
     Function that adds a new attribute to an object
     """
-    try:
-        obj.__setattr__(name, value)
-    except Exception as e:
+    if type(obj) in [str, int, float, complex, bool, set, tuple, list:
         raise TypeError("can't add new attribute")
+    else:
+        obj.__setattr__(name, value)
