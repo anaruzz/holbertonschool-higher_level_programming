@@ -1,0 +1,44 @@
+The ''7-base_geometry'' module
+============================
+Using ""integer_validator'' method in BaseGeometry class
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+import 'BaseGeometry' from '7-base_geometry' Module
+    >>> b = BaseGeometry()
+    >>> isinstance(b, BaseGeometry)
+    True
+
+raise TypeError if 'value' is not integer
+
+>>> try:
+...     b.integer_validator('name', 'not int')
+... except Exception as e:
+...    print(e)
+name must be an integer
+
+>>> try:
+...     b.integer_validator('fml', [1, 2, 3])
+... except Exception as e:
+...    print(e)
+fml must be an integer
+
+>>> try:
+...     b.integer_validator('fml', 4.57)
+... except Exception as e:
+...    print(e)
+fml must be an integer
+
+
+raise ValueError if value <= 0
+
+>>> try:
+...    b.integer_validator('name', -4)
+... except Exception as e:
+...    print(e)
+name must be greater than 0
+>>> try:
+...    b.integer_validator('queen', 0)
+... except Exception as e:
+...    print(e)
+queen must be greater than 0
