@@ -19,6 +19,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError('{} must be greater than 0'.format(name))
 
+
 class Rectangle(BaseGeometry):
     """
     creates a class calles Rectangle tht inherits from class BaseGeometry
@@ -46,6 +47,7 @@ class Rectangle(BaseGeometry):
         """
         p = '[Rectangle] ' + str(self.__width) + '/' + str(self.__height)
         return p
+
 
 class Square(Rectangle):
     def __init__(self, size):
