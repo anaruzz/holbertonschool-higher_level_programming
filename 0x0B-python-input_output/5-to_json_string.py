@@ -4,8 +4,8 @@ import json
 
 def to_json_string(my_obj):
     """
-    function that appends a text to a file
-    @filename: the path of the file
-    @text: text to be added
+    function that returns the JSON representation
+    of an object
+    @my_obj: object
     """
     return json.dumps(my_obj)
