@@ -6,11 +6,8 @@ def read_lines(filename="", nb_lines=0):
     @filename: the name of the file
     @nb_lines: number of lines
     """
+    lines_read = 0
     with open(filename) as f:
-        if nb_lines > 0:
-            for i in range(nb_lines):
-                for line in f:
-                    print(line, end="")
-        else:
-            for line in f:
+        for line in f:
+            if lines_read < nb_lines or nb_lines <= 0:
                 print(line, end="")
