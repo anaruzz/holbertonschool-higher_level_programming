@@ -7,7 +7,7 @@ def read_lines(filename="", nb_lines=0):
     @nb_lines: number of lines
     """
     lines_read = 0
-    with open(filename) as f:
+    with open(filename, encoding='UTF-8') as f:
         for line in f:
             if lines_read < nb_lines or nb_lines <= 0:
                 print(line, end="")
