@@ -11,5 +11,5 @@ def pascal_triangle(n):
             if j == 0 or j is i:
                 line[i].append(1)
             else:
-                line[i].append(line[i -1][j -1] + line[i -1][j])
+                line[i].append(line[i - 1][j - 1] + line[i - 1][j])
     return line
