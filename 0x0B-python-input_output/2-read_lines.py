@@ -11,3 +11,4 @@ def read_lines(filename="", nb_lines=0):
         for line in f:
             if lines_read < nb_lines or nb_lines <= 0:
                 print(line, end="")
+                lines_read += 1
