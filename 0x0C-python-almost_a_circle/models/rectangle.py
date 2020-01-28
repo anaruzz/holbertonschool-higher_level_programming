@@ -2,6 +2,8 @@
 from models.base import *
 
 """ rectangle"""
+
+
 class Rectangle(Base):
     """
     class Rectangle that inherits from class Base
@@ -107,7 +109,13 @@ class Rectangle(Base):
         """
         string representation of instance
         """
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        i = str(self.id)
+        x = str(self.x)
+        y = str(self.y)
+        w = str(self.width)
+        h = str(self.height)
+        a = "[Rectangle] (" + i + ") " + x + "/" + y + "-" + w + "/" + h
+        return a
 
     def update(self, *args, **kwargs):
             x = len(args)

@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 """ base """
+
+
 class Base:
     """
     The base of all other classes in the project
     """
     __nb_objects = 0
+
     def __init__(self, id=None):
         """
         class constructor
