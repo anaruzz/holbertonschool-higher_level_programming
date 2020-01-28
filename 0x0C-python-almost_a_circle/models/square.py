@@ -19,3 +19,19 @@ class Square(Rectangle):
         y = self.y
         s = self.size
         return ("[Square] ({}) {}/{} - {}".format(i, x, y, s))
+
+
+    @property
+    def size(self):
+        """ property setter for size attribute"""
+        return Rectangle.__width
+
+    @size.setter
+    def size(self, width):
+        """ propety setter for size attribute"""
+        if type(width) is not int:
+            raise TypeError('width must be an integer')
+        if width <= 0:
+            raise ValueError('width must be > 0')
+        Rectangle.__width = width
+        Rectangle.__height = width
