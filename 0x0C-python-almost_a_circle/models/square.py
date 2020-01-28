@@ -14,4 +14,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """ String representation11"""
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size))
+        i = self.id
+        x = self.x
+        y = self.y
+        s = self.size
+        return ("[Square] ({}) {}/{} - {}".format(i, x, y, s))
