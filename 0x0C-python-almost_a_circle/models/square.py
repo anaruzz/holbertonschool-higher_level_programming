@@ -20,7 +20,6 @@ class Square(Rectangle):
         s = self.size
         return ("[Square] ({}) {}/{} - {}".format(i, x, y, s))
 
-
     @property
     def size(self):
         """ property setter for size attribute"""
