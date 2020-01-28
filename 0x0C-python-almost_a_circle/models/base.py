@@ -2,7 +2,7 @@
 """ base Module is the parent of all shapes"""
 
 
-class Base():
+class Base:
     """
     The base of all other classes in the project
     """
@@ -17,4 +17,4 @@ class Base():
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = self.__nb_objects
+            self.id = Base.__nb_objects
