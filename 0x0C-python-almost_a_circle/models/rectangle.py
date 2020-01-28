@@ -118,3 +118,11 @@ class Rectangle(Base):
             if x >= 5:
                 self.y = args[4]
             return
+
+    def to_dictionary(self):
+        """ return dictionary of attributes"""
+        return {'id': self.id,
+                'width': self.width,
+                'height' : self.height,
+                'x': self.x,
+                'y': self.y}
