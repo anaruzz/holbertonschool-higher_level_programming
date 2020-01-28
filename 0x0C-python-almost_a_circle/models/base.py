@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" base """
+""" base Module is the parent of all shapes"""
 
 
 class Base:
