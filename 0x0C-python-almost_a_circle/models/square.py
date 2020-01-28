@@ -34,3 +34,28 @@ class Square(Rectangle):
             raise ValueError('width must be > 0')
         Rectangle.__width = width
         Rectangle.__height = width
+
+    def update(self, *args, **kwargs):
+        """ Update the attributes with args and kwars"""
+        x = len(args)
+        if x == 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "size":
+                    self.size = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
+            return
+        else:
+            if x >= 1:
+                self.id = args[0]
+            if x >= 2:
+                self.size = args[1]
+            if x >= 3:
+                self.x = args[2]
+            if x >= 4:
+                self.y = args[3]
+            return
