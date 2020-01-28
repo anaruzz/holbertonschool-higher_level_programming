@@ -123,6 +123,6 @@ class Rectangle(Base):
         """ return dictionary of attributes"""
         return {'id': self.id,
                 'width': self.width,
-                'height' : self.height,
+                'height': self.height,
                 'x': self.x,
                 'y': self.y}
