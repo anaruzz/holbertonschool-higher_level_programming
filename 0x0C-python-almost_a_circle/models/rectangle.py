@@ -88,8 +88,7 @@ class Rectangle(Base):
         y = str(self.y)
         w = str(self.width)
         h = str(self.height)
-        a = "[Rectangle] (" + i + ") " + x + "/" + y + "-" + w + "/" + h
-        return a
+        return "[Rectangle] (" + i + ") " + x + "/" + y + " - " + w + "/" + h
 
     def update(self, *args, **kwargs):
         """ Update the attributes with args and kwars"""
