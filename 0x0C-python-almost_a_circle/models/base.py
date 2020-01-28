@@ -2,6 +2,7 @@
 """ base Module is the parent of all shapes"""
 import json
 
+
 class Base:
     """
     The base of all other classes in the project
