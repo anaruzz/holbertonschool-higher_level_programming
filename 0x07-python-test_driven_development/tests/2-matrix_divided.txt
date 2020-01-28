@@ -32,4 +32,11 @@ matrix must be a matrix (list of lists) of integers/floats
 ...
 div must be a number
 
+>>> try:
+...     matrix_divided([[3, "9"], [12, 3]], 3)
+... except Exception as e:
+...     print(e)
+...
+matrix must be a matrix (array of arrays of integers/floats)
+
 """
