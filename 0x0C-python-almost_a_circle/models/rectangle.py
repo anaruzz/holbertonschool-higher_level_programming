@@ -8,7 +8,7 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ class constructor """
-        super().__init__(id)
+        Base.__init__(self, id)
         self.width = width
         self.height = height
         self.x = x
@@ -92,6 +92,7 @@ class Rectangle(Base):
         return a
 
     def update(self, *args, **kwargs):
+        """ Update the attributes with args and kwars"""
             x = len(args)
             if x == 0:
                 for key, value in kwargs.items():
