@@ -1,19 +1,15 @@
 #!/usr/bin/python3
+""" rectangle"""
+from models.base import *
 
-""" Rectangle Class Module"""
-from models.base import Base
 
 
 class Rectangle(Base):
-    """ Rectangle Class, inherits from Base """
-
-    def __str__(self):
-        """ String representation of a Rectangle """
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(
-                self.id, self.x, self.y, self.width, self.height)
-
+    """
+    class Rectangle that inherits from class Base
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Rectangle constructor """
+        """ class constructor """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -22,64 +18,63 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """ returns private instance attribute """
+        """ property getter for width attribute """
         return self.__width
 
     @width.setter
-    def width(self, val):
-        """ sets private instance attribute """
-        if type(val) is not int:
+    def width(self, value):
+        """ property setter for width attribute """
+        if type(value) is not int:
             raise TypeError('width must be an integer')
-        if val <= 0:
+        if value <= 0:
             raise ValueError('width must be > 0')
-        self.__width = val
+        self.__width = value
 
     @property
     def height(self):
-        """ returns private instance attribute """
+        """ property getter for height attribute """
         return self.__height
 
     @height.setter
-    def height(self, val):
-        """ sets private instance attribute """
-        if type(val) is not int:
+    def height(self, value):
+        """ property setter for height attribute """
+        if type(value) is not int:
             raise TypeError('height must be an integer')
-        if val <= 0:
+        if value <= 0:
             raise ValueError('height must be > 0')
-        self.__height = val
+        self.__height = value
 
     @property
     def x(self):
-        """ returns private instance attribute """
+        """ property getter for x attribute """
         return self.__x
 
     @x.setter
-    def x(self, val):
-        """ sets private instance attribute """
-        if type(val) is not int:
+    def x(self, value):
+        """ property setter for x attribute """
+        if type(value) is not int:
             raise TypeError('x must be an integer')
-        if val < 0:
+        if value < 0:
             raise ValueError('x must be >= 0')
-        self.__x = val
+        self.__x = value
 
     @property
     def y(self):
-        """ returns private instance attribute """
+        """ property getter for y attribute """
         return self.__y
 
     @y.setter
-    def y(self, val):
-        """ sets private instance attribute """
-        if type(val) is not int:
+    def y(self, value):
+        """ property setter for y attribute """
+        if type(value) is not int:
             raise TypeError('y must be an integer')
-        if val < 0:
+        if value < 0:
             raise ValueError('y must be >= 0')
-        self.__y = val
+        self.__y = value
 
     def area(self):
-        """ returns the area value of a Rectangle object """
-        return self.width * self.height
-
+        """ return area value of a rectangle """
+        return self.height * self.width
 
     def display(self):
         """ display a rectangle in "#" """
@@ -89,7 +84,7 @@ class Rectangle(Base):
             print('#' * self.width)
 
     def __str__(self):
-        """ string representation of instance """
+        """string representation of instance """
         i = str(self.id)
         x = str(self.x)
         y = str(self.y)
