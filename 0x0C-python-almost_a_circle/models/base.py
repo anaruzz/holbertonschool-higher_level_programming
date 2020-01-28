@@ -2,7 +2,7 @@
 """ base Module is the parent of all shapes"""
 
 
-class Base:
+class Base():
     """
     The base of all other classes in the project
     """
