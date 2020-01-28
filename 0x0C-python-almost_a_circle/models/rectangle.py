@@ -93,29 +93,29 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """ Update the attributes with args and kwars"""
-            x = len(args)
-            if x == 0:
-                for key, value in kwargs.items():
-                    if key == "id":
-                        self.id = value
-                    if key == "width":
-                        self.width = value
-                    if key == "height":
-                        self.height = value
-                    if key == "x":
-                        self.x = value
-                    if key == "y":
-                        self.y = value
-                return
-            else:
-                if x >= 1:
-                    self.id = args[0]
-                if x >= 2:
-                    self.width = args[1]
-                if x >= 3:
-                    self.height = args[2]
-                if x >= 4:
-                    self.x = args[3]
-                if x >= 5:
-                    self.y = args[4]
-                return
+        x = len(args)
+        if x == 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
+            return
+        else:
+            if x >= 1:
+                self.id = args[0]
+            if x >= 2:
+                self.width = args[1]
+            if x >= 3:
+                self.height = args[2]
+            if x >= 4:
+                self.x = args[3]
+            if x >= 5:
+                self.y = args[4]
+            return
