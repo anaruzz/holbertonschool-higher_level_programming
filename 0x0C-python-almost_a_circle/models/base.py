@@ -38,6 +38,7 @@ class Base:
                     s.append(i.to_dictionary())
             f.write(cls.to_json_string(s))
 
+    @staticmethod
     def from_json_string(json_string):
         s = []
         if json_string is None:
