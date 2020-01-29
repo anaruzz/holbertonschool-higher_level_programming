@@ -59,11 +59,12 @@ class Base:
     @classmethod
     def load_from_file(cls):
         s = []
-        with open(cls.__name__ + ".json", 'r') as f:
-            not_empty = f.read()
-            if not not_empty:
-                return cls.from_json_string(s)
-            list_inst = cls.from_json_string(not_empty)
-            for i in list_inst:
-                s.append(cls.create(**i))
-        return s
+        try:
+            with open(cls.__name__ + ".json", 'r') as f:
+                not_empty = f.read()
+                list_inst = cls.from_json_string(not_empty)
+                for i in list_inst:
+                    s.append(cls.create(**i))
+            return s
+        except:
+            return s
