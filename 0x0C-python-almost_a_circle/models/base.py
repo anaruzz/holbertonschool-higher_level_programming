@@ -46,3 +46,9 @@ class Base:
         else:
             s = json.loads(json_string)
             return s
+
+    @classmethod
+    def create(cls, **dictionary):
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
