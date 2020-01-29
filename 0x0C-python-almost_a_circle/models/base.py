@@ -55,3 +55,15 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        s = []
+        with open(cls.__name__ + ".json", 'r') as f:
+            not_empty = f.read()
+            if not not_empty:
+                return s
+            list_inst = cls.from_json_string(not_empty)
+            for i in list_inst:
+                s.append(cls.create(**i))
+        return s
