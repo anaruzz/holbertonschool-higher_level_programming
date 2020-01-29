@@ -37,3 +37,11 @@ class Base:
                 for i in list_objs:
                     s.append(i.to_dictionary())
             f.write(cls.to_json_string(s))
+
+    def from_json_string(json_string):
+        s = []
+        if json_string is None:
+            return s
+        else:
+            s = json.loads(json_string)
+            return s
