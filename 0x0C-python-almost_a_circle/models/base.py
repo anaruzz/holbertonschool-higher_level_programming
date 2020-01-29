@@ -62,7 +62,7 @@ class Base:
         with open(cls.__name__ + ".json", 'r') as f:
             not_empty = f.read()
             if not not_empty:
-                return s
+                return cls.from_json_string(s)
             list_inst = cls.from_json_string(not_empty)
             for i in list_inst:
                 s.append(cls.create(**i))
