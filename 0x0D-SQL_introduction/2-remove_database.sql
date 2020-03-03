@@ -1,2 +1,2 @@
--- lists all the tables of a database 
-SHOW tables;
+-- remove database 
+DROP DATABASE IF EXISTS hbtn_0c_0;
