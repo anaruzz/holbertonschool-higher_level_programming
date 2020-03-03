@@ -1,2 +1,2 @@
-#!/usr/bin/env ruby
-puts ARGV[0].scan(/hbt+n/).join
+-- whatever
+CREATE TABLE IF NOT EXISTS first_table (id int, name varchar(256));
