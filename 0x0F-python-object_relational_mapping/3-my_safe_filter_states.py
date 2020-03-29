@@ -10,7 +10,6 @@ if __name__ == "__main__":
     state_name = argv[4]
 
     if ';' in state_name:
-        print('SQL injection failed')
         exit()
 
     import MySQLdb
