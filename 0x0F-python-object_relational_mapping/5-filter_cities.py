@@ -27,3 +27,6 @@ if __name__ == "__main__":
     results = ', '.join(results)
 
     print(results)
+
+    cur.close()
+    db.close()
