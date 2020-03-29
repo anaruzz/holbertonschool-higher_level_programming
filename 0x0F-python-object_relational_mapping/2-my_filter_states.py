@@ -19,4 +19,5 @@ if __name__ == "__main__":
     cur.execute(sql)
     rows = cur.fetchall()
     for row in rows:
-        print("{}".format(row))
+        if row[1] == state_name:
+            print("{}".format(row))
