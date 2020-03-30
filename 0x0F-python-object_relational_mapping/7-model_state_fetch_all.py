@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and len(sys.argv) ==4:
     engine = create_engine('mysql+mysqldb://{}:{}\@localhost/{}'.format(
                             sys.argv[1],
                             sys.argv[2],
