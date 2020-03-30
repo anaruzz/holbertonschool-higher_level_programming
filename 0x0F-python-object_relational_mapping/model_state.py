@@ -8,6 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 Base = declarative_base()
 
+
 class State(Base):
     """
     State class that is mapped to the table states
