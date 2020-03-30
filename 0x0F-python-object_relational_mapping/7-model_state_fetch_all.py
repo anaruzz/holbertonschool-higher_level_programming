@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
 
-if __name__ == "__main__" and len(sys.argv) ==4:
+if __name__ == "__main__" and len(sys.argv) == 4:
     engine = create_engine('mysql+mysqldb://{}:{}\@localhost/{}'.format(
                             sys.argv[1],
                             sys.argv[2],
@@ -18,7 +18,7 @@ if __name__ == "__main__" and len(sys.argv) ==4:
     Base.metadata.create_all(engine)
 
     Session = sessionmaker()
-    session.configure(bind=engine)
+    Session.configure(bind=engine)
     session = Session()
 
     for instance in session.query(State).order_by(State.id):
