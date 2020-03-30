@@ -8,8 +8,10 @@ import sys
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
-
-if __name__ == "__main__" and len(sys.argv) == 4:
+def main(argv):
+    """
+    main function
+    """
     engine = create_engine('mysql+mysqldb://{}:{}\@localhost/{}'.format(
                             sys.argv[1],
                             sys.argv[2],
@@ -23,3 +25,7 @@ if __name__ == "__main__" and len(sys.argv) == 4:
 
     for instance in session.query(State).order_by(State.id):
         print("{}: {}".format(instance.id, instance.name))
+
+
+if __name__ == '__main__' and len(sys.argv) == 4:
+    main(sys.argv)
