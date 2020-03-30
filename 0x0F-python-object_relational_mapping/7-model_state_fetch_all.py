@@ -6,7 +6,7 @@ Module that lists all State objects
 from model_state import Base, State
 import sys
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
+from sqlalchemy import (create_engine)
 
 if __name__ == '__main__' and len(sys.argv) == 4:
     engine = create_engine('mysql+mysqldb://{}:{}\@localhost/{}'.format(
