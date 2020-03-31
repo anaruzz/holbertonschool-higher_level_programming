@@ -19,6 +19,6 @@ if __name__ == '__main__' and len(sys.argv) == 4:
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State).filter(State.id=='2').first()
+    query = session.query(State).filter(State.id == '2').first()
     query.name = 'New Mexico'
     session.commit()
