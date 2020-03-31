@@ -19,5 +19,5 @@ if __name__ == '__main__' and len(sys.argv) == 4:
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for instance in session.query(City).order_by(City.id):
-        print("{}: ({}) {}".format(instance.State.name, instance.id, instance.name))
+    for c, s in session.query(City, State).filter(City.state_id == State.id):
+        print("{}: ({}) {}".format(s.name, c.id, c.name))
