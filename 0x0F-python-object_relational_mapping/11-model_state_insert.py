@@ -14,7 +14,7 @@ if __name__ == '__main__' and len(sys.argv) == 4:
                             sys.argv[1],
                             sys.argv[2],
                             sys.argv[3]),
-                            pool_pre_ping=True)
+                           pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
 
