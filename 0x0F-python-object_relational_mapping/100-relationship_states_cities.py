@@ -19,7 +19,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
     parent = State(name='California')
     child = City(name='San Francisco')
     parent.cities.append(child)
