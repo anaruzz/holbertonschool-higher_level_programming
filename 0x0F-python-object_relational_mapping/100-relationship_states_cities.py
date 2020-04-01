@@ -8,7 +8,7 @@ import sys
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
 
-if __name__ == '__main__' and len(sys.argv) == 4:
+if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
                             sys.argv[1],
                             sys.argv[2],
@@ -23,4 +23,5 @@ if __name__ == '__main__' and len(sys.argv) == 4:
     parent = State(name='California')
     child = City(name='San Francisco')
     parent.cities.append(child)
+    session.add(parent)
     session.commit()
