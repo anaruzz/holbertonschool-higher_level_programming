@@ -8,8 +8,10 @@ def find_peak(list_of_integers):
 
     if list_of_integers == []:
         return None
-    arr = list_of_integers
-    for i in range(1, len(arr)-1):
-        if arr[i] > arr[i-1] and arr[i] > arr[i+1]:
-            return arr[i]
-    return max(arr[0], arr[-1])
+    length = len(list_of_integers)
+    for i in range(length):
+        current = list_of_integers[i]
+        n = list_of_integers[i+1]
+        p = list_of_integers[i-1]
+        if current >= n and current >= p:
+            return current
