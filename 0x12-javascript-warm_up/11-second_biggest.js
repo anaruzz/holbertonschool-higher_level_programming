@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // a script that searches the second biggest integer in the arguments
-if (process.argv.length < 3) {
+if (process.argv.length <= 3) {
   console.log('0');
 } else {
   let i = 3; let current;
