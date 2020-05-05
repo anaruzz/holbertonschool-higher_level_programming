@@ -7,6 +7,6 @@ if (process.argv.length < 3) {
   if (isNaN(a)) {
     console.log('Not a number');
   } else {
-    console.log(a);
+    console.log('My number: ' + a);
   }
 }
