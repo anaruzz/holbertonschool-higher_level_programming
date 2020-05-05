@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // a script that adds the first two arguments
-function factorial (a) {
+function factorial(a) {
   if (isNaN(a)) {
     return 1;
   }
