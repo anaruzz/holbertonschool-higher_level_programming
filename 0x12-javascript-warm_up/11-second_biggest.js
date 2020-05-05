@@ -3,18 +3,9 @@
 if (process.argv.length <= 3) {
   console.log('0');
 } else {
-  let i = 3; let current;
-  let max1 = parseInt(process.argv[2]);
-  let max2 = parseInt(process.argv[2]);
-  for (; i < process.argv.length; i++) {
-    current = parseInt(process.argv[i]);
-    if (current > max1) {
-      max2 = max1;
-      max1 = current;
-    }
-    if (current > max2 && current < max1) {
-      max2 = current;
-    }
-  }
-  console.log(max2);
+  let args = process.argv.slice(2, process.argv.length);
+  args = args.sort(function (a, b) { return a - b; });
+  args.pop();
+  args = args.slice(-1);
+  console.log(args[0]);
 }
