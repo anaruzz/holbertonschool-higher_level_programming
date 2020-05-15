@@ -7,6 +7,6 @@ class Rectangle {
     this.height = undefined;
     this.width = w;
     this.height = h;
-    }
+  }
 }
 module.exports = Rectangle;
