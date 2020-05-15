@@ -3,8 +3,8 @@
 
 class Rectangle {
   constructor (w, h) {
-    this.width = undefined;
-    this.height = undefined;
+    // this.width = undefined;
+    // this.height = undefined;
     this.width = w;
     this.height = h;
   }
