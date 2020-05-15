@@ -2,7 +2,7 @@
 // Script that creates empty class
 
 class Rectangle {
-  constructor (h, w) {
+  constructor (w, h) {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
@@ -11,9 +11,8 @@ class Rectangle {
 
   // print
   print () {
-    var i, j;
-    for (i = 0; i < this.width; i++) {
-      for (j = 0; j < this.height; j++) {
+    for (let i = 0; i < this.height; i++) {
+      for (let j = 0; j < this.width; j++) {
         process.stdout.write('X');
       }
       process.stdout.write('\n');
