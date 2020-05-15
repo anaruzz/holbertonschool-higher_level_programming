@@ -1,11 +1,7 @@
 #!/usr/bin/node
 // Script that creates square
-const Rectangle = require('./4-rectangle');
+const Rectangle = require('./5-square');
 class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
   // charPrint
   charPrint (c) {
     if (c === undefined) {
