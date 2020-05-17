@@ -5,7 +5,7 @@ const fs = require('fs');
 const file = process.argv[2];
 const encoding = 'utf-8';
 
-fs.readFile(file, encoding, function(err, data) {
+fs.readFile(file, encoding, function (err, data) {
   if (err) {
     console.log(err);
   } else {
